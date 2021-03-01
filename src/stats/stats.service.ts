@@ -12,7 +12,7 @@ export class StatsService {
       ) {}
 
 async create(plstats){
-    return this.plStatsRepository.createpl(plstats)
+    return  await this.plStatsRepository.createpl(plstats)
 
 }
 

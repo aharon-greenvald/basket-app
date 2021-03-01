@@ -1,31 +1,34 @@
 import { Entity, Column, PrimaryGeneratedColumn, PrimaryColumn } from 'typeorm';
 
 @Entity()
-export class Plstats {
+export class Game {
   @PrimaryGeneratedColumn()
   id: number;
   
   @Column({nullable:true})
-  name: string;
+  date: string;
 
 
   @Column({nullable:true})
-  made: number;
+  gameDuration: string;
   @Column({nullable:true})
-  missed: number;
+  sumPointsTeam1: number;
   
   @Column({nullable:true})
-  points: number;
+  sumPointsTeam2: number;
   
   @Column({nullable:true})
-  percentage: number;
+  sumTeam1Prec: number;
 
 
   @Column({nullable:true})
-  teamName: string;
+  sumTeam2Prec: number;
 
   @Column({nullable:true})
-  gameId: string;
+  team1name: string;
+
+  @Column({nullable:true})
+  team2name: string;
 
 
 

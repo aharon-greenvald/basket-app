@@ -113,7 +113,7 @@ export class PlayerService {
      async create(){
          let y 
           for(let player of this.names){
-              console.log(player);
+              // console.log(player);
               const newPlayer = new Player()
               
               newPlayer.name = player.name

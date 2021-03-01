@@ -1,6 +1,7 @@
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { Player } from './players/players.entitiy';
 import { Plstats } from './stats/plstats.entity';
+import { Game } from './stats/gameStats.entity';
 
 export const configPlayer:TypeOrmModuleOptions ={
     type: 'postgres',
@@ -10,5 +11,5 @@ export const configPlayer:TypeOrmModuleOptions ={
     host:'127.0.0.1',
     database:'basketball',
     synchronize: true,
-    entities: [Player,Plstats]
+    entities: [Player,Plstats,Game]
 }

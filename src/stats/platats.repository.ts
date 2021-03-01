@@ -4,8 +4,7 @@ import { Plstats } from "./plstats.entity";
 @EntityRepository(Plstats)
 export class PlStatsRepository extends Repository<Plstats> {
 
-   createpl(plstats){
-        let plst
+ async  createpl(plstats){
         for(let p of plstats.playerStats){
             console.log(p);
             
@@ -16,9 +15,9 @@ export class PlStatsRepository extends Repository<Plstats> {
             playerStats.points = p.points
             playerStats.percentage = p.percentage
             playerStats.teamName = p.teamName
-            this.save(playerStats)
+            playerStats.gameId = p.gameId
+           await this.save(playerStats)
         }
-         console.log(plst); 
     }
     
 findAll() {
